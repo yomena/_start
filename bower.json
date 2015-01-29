@@ -1,0 +1,21 @@
+{
+  "name": "about_blank",
+  "version": "0.0.1",
+  "authors": [
+    "yomena"
+  ],
+  "description": "Bower Packages for about_blank",
+  "license": "MIT",
+  "homepage": "http://yomena.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.2",
+    "fontawesome": "~4.3.0"
+  }
+}
