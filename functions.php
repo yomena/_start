@@ -100,6 +100,11 @@ add_action( 'widgets_init', 'aboutblank_widgets_init' );
  * Enqueue scripts and styles.
  */
 function aboutblank_scripts() {
+
+	wp_enqueue_style( 'main-css', get_template_directory_uri() . '/assets/css/main.min.css', false, ‘all’ );
+
+	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/assets/js/main.min.js', array(), true );
+
 	wp_enqueue_style( 'aboutblank-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'aboutblank-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
@@ -136,3 +141,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+* Navwalker for Bootstrap Navigation
+*/
+require_once('wp_bootstrap_navwalker.php');
