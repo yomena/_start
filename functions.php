@@ -94,6 +94,8 @@ function aboutblank_scripts() {
 
 	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/assets/js/main.min.js', array(), true );
 
+	wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/assets/js/custom.js', array(), true );
+
 	wp_enqueue_style( 'aboutblank-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'aboutblank-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
@@ -114,7 +116,7 @@ add_action( 'wp_enqueue_scripts', 'aboutblank_scripts' );
 /**
 * Register Sidebars
 */
-require get_template_directory() . '/inc/sidebars.php';
+require get_template_directory() . '/inc/widget-areas.php';
 
 /**
  * Custom template tags for this theme.
