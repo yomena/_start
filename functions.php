@@ -83,18 +83,7 @@ add_action( 'after_setup_theme', 'aboutblank_setup' );
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function aboutblank_widgets_init() {
-	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'aboutblank' ),
-		'id'            => 'sidebar-1',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
-	) );
-}
-add_action( 'widgets_init', 'aboutblank_widgets_init' );
+
 
 /**
  * Enqueue scripts and styles.
@@ -123,6 +112,11 @@ add_action( 'wp_enqueue_scripts', 'aboutblank_scripts' );
 //require get_template_directory() . '/inc/custom-header.php';
 
 /**
+* Register Sidebars
+*/
+require get_template_directory() . '/inc/sidebars.php';
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
@@ -145,4 +139,10 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
 * Navwalker for Bootstrap Navigation
 */
-require_once('wp_bootstrap_navwalker.php');
+require_once get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
+
+
+/**
+* Bootstrap Forms
+*/
+require get_template_directory() . '/inc/bootstrap-forms.php';

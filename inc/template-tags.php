@@ -83,16 +83,16 @@ function aboutblank_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		_x( 'Posted on %s', 'post date', 'aboutblank' ),
+		_x( '%s', 'post date', 'aboutblank' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
-		_x( 'by %s', 'post author', 'aboutblank' ),
+		_x( '%s', 'post author', 'aboutblank' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
+	echo '<span class="posted-on small"><i class="fa fa-calendar"></i>&nbsp;' . $posted_on . '</span><span class="byline small"> | <i class="fa fa-user"></i>&nbsp; ' . $byline . '</span>';
 
 }
 endif;

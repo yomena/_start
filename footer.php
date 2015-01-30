@@ -11,11 +11,28 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="container">
+			<div class="footer-widget-area">
+				<div class="row">
+					<div class="col-sm-3">
+						<?php dynamic_sidebar( 'footer-1' ); ?>
+					</div><!-- .col-sm-3 -->
+					<div class="col-sm-3">
+						<?php dynamic_sidebar( 'footer-2' ); ?>
+					</div><!-- .col-sm-3 -->
+					<div class="col-sm-3">
+						<?php dynamic_sidebar( 'footer-3' ); ?>
+					</div><!-- .col-sm-3 -->
+					<div class="col-sm-3">
+						<?php dynamic_sidebar( 'footer-4' ); ?>
+					</div><!-- .col-sm-3 -->
+				</div><!-- .row -->
+			</div><!-- .footer-widget-area -->
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'aboutblank' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'aboutblank' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'aboutblank' ), 'about_blank', '<a href="http://yomena.com" rel="designer">yomena</a>' ); ?>
+			<a href="<?php echo home_url(); ?>" class="small"><?php bloginfo('name'); ?></a>
+			<a href="#page" class="pull-right"><i class="fa fa-chevron-circle-up" rel="tooltip" title="Back to Top"></i></a>
 		</div><!-- .site-info -->
+	</div><!-- .container -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
