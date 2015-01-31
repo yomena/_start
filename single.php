@@ -14,7 +14,7 @@ get_header(); ?>
 
 			<?php get_template_part( 'content', 'single' ); ?>
 
-			<?php aboutblank_the_post_navigation(); ?>
+			<?php about_blank_the_post_navigation(); ?>
 
 
 			<?php

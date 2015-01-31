@@ -10,7 +10,7 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php aboutblank_posted_on(); ?>
+			<?php about_blank_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -27,20 +27,20 @@
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
-				__( 'Continue reading <span class="meta-nav">...</span>', 'aboutblank' ),
+				__( 'Continue reading <span class="meta-nav">...</span>', 'about_blank' ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 		?>
 
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'aboutblank' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'about_blank' ),
 				'after'  => '</div>',
 			) );
 		?>
 
 		<footer class="entry-footer">
-			<?php aboutblank_entry_footer(); ?>
+			<?php about_blank_entry_footer(); ?>
 		</footer><!-- .entry-footer -->
 	</div><!-- .media-body -->
 

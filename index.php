@@ -31,7 +31,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php aboutblank_pagination($pages = '', $range = 2); ?>
+			<?php about_blank_pagination($pages = '', $range = 2); ?>
 
 		<?php else : ?>
 
