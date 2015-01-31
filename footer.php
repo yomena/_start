@@ -29,7 +29,7 @@
 				</div><!-- .row -->
 			</div><!-- .footer-widget-area -->
 		<div class="site-info">
-			<a href="<?php echo home_url(); ?>" class="small"><?php bloginfo('name'); ?></a>
+			<span class="small"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a> <?php echo date("Y"); ?></span>
 			<a href="#page" class="pull-right"><i class="fa fa-chevron-circle-up" rel="tooltip" title="Back to Top"></i></a>
 		</div><!-- .site-info -->
 	</div><!-- .container -->

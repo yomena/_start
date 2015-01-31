@@ -69,6 +69,12 @@ function aboutblank_setup() {
 		'aside', 'image', 'video', 'quote', 'link',
 	) );
 
+	/*
+	* Enable support for Post Thumbnails.
+	* See http://codex.wordpress.org/Post_Thumbnails
+	*/
+	add_theme_support( 'post-thumbnails' );
+
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'aboutblank_custom_background_args', array(
 		'default-color' => 'ffffff',
@@ -148,3 +154,9 @@ require_once get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
 * Bootstrap Forms
 */
 require get_template_directory() . '/inc/bootstrap-forms.php';
+
+
+/**
+* Pagination
+*/
+require get_template_directory() . '/inc/pagination.php';

@@ -30,7 +30,7 @@ less: {
       paths: ['assets/css']
     },
     files: {
-      'assets/css/main.css': [
+      'assets/css/vendor.css': [
       'bower_components/bootstrap/less/bootstrap.less',
       'bower_components/fontawesome/less/font-awesome.less'
       ]
@@ -38,13 +38,22 @@ less: {
   }
   },
 
-//minify css
+//combine and minify css
     cssmin: {
+      combine: {
+        files: {
+          'assets/css/main.css': [
+          'assets/css/vendor.css',
+          'assets/css/fixes.css'
+          ]
+        }
+      },
       minify: {
         src: 'assets/css/main.css',
         dest: 'assets/css/main.min.css'
       }
     },
+
 
 //compress images
     imagemin: {
@@ -79,7 +88,7 @@ less: {
             src: [
             'bower_components/wp-bootstrap-navwalker/wp_bootstrap_navwalker.php'
             ],
-            dest: '',
+            dest: 'inc/',
             filter: 'isFile'
           },
 

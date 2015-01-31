@@ -15,11 +15,19 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-content media">
+
+		<?php	if ( has_post_thumbnail() ) : ?>
+			<div class="media-left">
+				<?php the_post_thumbnail(thumbnail);?>
+			</div>
+		<?php endif; ?>
+
+	<div class="media-body">
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
-				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'aboutblank' ),
+				__( 'Continue reading <span class="meta-nav">...</span>', 'aboutblank' ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 		?>
@@ -30,9 +38,17 @@
 				'after'  => '</div>',
 			) );
 		?>
-	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php aboutblank_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+		<footer class="entry-footer">
+			<?php aboutblank_entry_footer(); ?>
+		</footer><!-- .entry-footer -->
+	</div><!-- .media-body -->
+
+</div><!-- .entry-content -->
+
+
+
+
+
+
 </article><!-- #post-## -->

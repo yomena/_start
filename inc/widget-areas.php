@@ -4,7 +4,7 @@ function aboutblank_widgets_init() {
     'name'          => __( 'Header', 'aboutblank' ),
     'id'            => 'header',
     'description'   => '',
-    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'before_widget' => '<aside id="%1$s" class="headerwidget widget %2$s">',
     'after_widget'  => '</aside>',
     'before_title'  => '<h3 class="widget-title">',
     'after_title'   => '</h3>',

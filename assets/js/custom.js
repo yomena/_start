@@ -20,4 +20,7 @@ jQuery(document).ready(function($){
     $(".navbar-toggle").click();
 });
 
+/*-------------------Tooltips-----------------------------*/
+  $('[rel=tooltip]').tooltip();
+
 });

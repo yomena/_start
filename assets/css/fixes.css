@@ -1,0 +1,13 @@
+/*Hide Form Submitt Button - inc/bootstrap-forms.php creates a new one*/
+.form-submit {
+display: none;
+}
+
+/*Fixes for Header Widget*/
+.headerwidget{
+  margin-top: -20px;
+}
+
+.headerwidget img{
+  max-width: 100%;
+}

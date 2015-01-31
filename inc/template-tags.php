@@ -37,13 +37,13 @@ function the_posts_navigation() {
 }
 endif;
 
-if ( ! function_exists( 'the_post_navigation' ) ) :
+if ( ! function_exists( 'aboutblank_the_post_navigation' ) ) :
 /**
  * Display navigation to next/previous post when applicable.
  *
  * @todo Remove this function when WordPress 4.3 is released.
  */
-function the_post_navigation() {
+function aboutblank_the_post_navigation() {
 	// Don't print empty markup if there's nowhere to navigate.
 	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
 	$next     = get_adjacent_post( false, '', false );
@@ -53,13 +53,13 @@ function the_post_navigation() {
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php _e( 'Post navigation', 'aboutblank' ); ?></h2>
-		<div class="nav-links">
+
+		<ul class="pager">
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', '%title' );
-				next_post_link( '<div class="nav-next">%link</div>', '%title' );
+				previous_post_link( '<li class="previous">%link</li>', '&larr; %title' );
+				next_post_link( '<li class="next">%link</li>', '%title &rarr;' );
 			?>
-		</div><!-- .nav-links -->
+		</ul>
 	</nav><!-- .navigation -->
 	<?php
 }
@@ -92,7 +92,7 @@ function aboutblank_posted_on() {
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="posted-on small"><i class="fa fa-calendar"></i>&nbsp;' . $posted_on . '</span><span class="byline small"> | <i class="fa fa-user"></i>&nbsp; ' . $byline . '</span>';
+	echo '<span class="posted-on small"><i class="fa fa-calendar"  Title="Date" rel="tooltip"></i>&nbsp;' . $posted_on . '</span><span class="byline small"> | <i class="fa fa-user Title="Author" rel="tooltip"></i>&nbsp; ' . $byline . '</span>';
 
 }
 endif;
@@ -107,23 +107,23 @@ function aboutblank_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'aboutblank' ) );
 		if ( $categories_list && aboutblank_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'aboutblank' ) . '</span>', $categories_list );
+			printf( '<span class="cat-links small"><i class="fa fa-folder" title="Categories" rel="tooltip"></i>&nbsp;' . __( '%1$s', 'aboutblank' ) . '</span> ', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( ', ', 'aboutblank' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'aboutblank' ) . '</span>', $tags_list );
+			printf( '<span class="tags-links small"><i class="fa fa-tags" title="Tags" rel="tooltip"></i>&nbsp;' . __( '%1$s', 'aboutblank' ) . '</span> ', $tags_list );
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
-		comments_popup_link( __( 'Leave a comment', 'aboutblank' ), __( '1 Comment', 'aboutblank' ), __( '% Comments', 'aboutblank' ) );
+		echo '<span class="comments-link small"><i class="fa fa-comments" Title="Comments" rel="tooltip"></i>&nbsp;';
+		comments_popup_link( __( 'Leave a comment', 'aboutblank' ), __( '1 ', 'aboutblank' ), __( '% ', 'aboutblank' ) );
 		echo '</span>';
 	}
 
-	edit_post_link( __( 'Edit', 'aboutblank' ), '<span class="edit-link">', '</span>' );
+	edit_post_link( __( 'Edit', 'aboutblank' ), '<div class="edit-link"><i class="fa fa-edit"></i>&nbsp;', '</div>' );
 }
 endif;
 
