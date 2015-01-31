@@ -16,9 +16,12 @@ jQuery(document).ready(function($){
 
 
 /*-------------------Fix for Collapsed Navbar with #Links-----------------------------*/
-  $('.nav a').on('click', function(){
-    $(".navbar-toggle").click();
-});
+$("body").click(function(event) {
+        // only do this if navigation is visible, otherwise you see jump in navigation while collapse() is called
+         if ($(".navbar-collapse").is(":visible") && $(".navbar-toggle").is(":visible") ) {
+            $('.navbar-collapse').collapse('toggle');
+        }
+  });
 
 /*-------------------Tooltips-----------------------------*/
   $('[rel=tooltip]').tooltip();

@@ -20,6 +20,7 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
+		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'about_blank' ); ?></a>
 		<nav class="navbar navbar-default" role="navigation">
 	<div class="container">
 		<!-- Brand and toggle get grouped for better mobile display -->
