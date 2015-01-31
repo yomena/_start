@@ -13,13 +13,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
 <?php wp_head(); ?>
+<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
+		<!--[if lt IE 10]>
+			<div class="browsehappy alert alert-info">
+				<div class="container">
+			You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to improve your experience.
+				</div>
+			</div>
+		<![endif]-->
+
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'about_blank' ); ?></a>
 		<nav class="navbar navbar-default" role="navigation">
 	<div class="container">
