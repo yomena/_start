@@ -5,7 +5,7 @@ display: none;
 
 /*Fixes for Header Widget*/
 .headerwidget{
-  margin-top: -20px;
+  margin: -20px 0 20px 0;
 }
 
 .headerwidget img{

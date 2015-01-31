@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
+	<section id="primary" class="content-area col-sm-8"><!-- Set col-sm- to 12 when no sidebar, otherwise to 8 -->
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -41,5 +41,7 @@ get_header(); ?>
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
+
+<?php get_sidebar(); ?><!-- If you remove the Sidebar, set col-sm- to 12 on line 10 -->
+
 <?php get_footer(); ?>
