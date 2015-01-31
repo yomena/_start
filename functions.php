@@ -5,27 +5,6 @@
  * @package about_blank
  */
 
-/**
-	* Stop automatically adding 'Open Sans' from Google Fonts.
-	*/
-class Disable_Google_Fonts {
-public function __construct() {
-add_filter( 'gettext_with_context', array( $this, 'disable_open_sans' ), 888, 4 );
-add_action( 'after_setup_theme', array( $this, 'register_theme_fonts_disabler' ), 1 );
-}
-public function disable_open_sans( $translations, $text, $context, $domain ) {
-if ( 'Open Sans font: on or off' == $context && 'on' == $text ) {
-$translations = 'off';
-}
-return $translations;
-}
-public function register_theme_fonts_disabler() {
-$template = get_template();
-}
-}
-$disable_google_fonts = new Disable_Google_Fonts;
-
-
 if ( ! function_exists( 'about_blank_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
