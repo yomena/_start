@@ -42,3 +42,12 @@ display: none;
 .headerwidget img{
   max-width: 100%;
 }
+
+/*Margins for images*/
+img.alignleft{
+  margin-right: 10px;
+}
+
+img.alignright{
+  margin-left: 10px;
+}

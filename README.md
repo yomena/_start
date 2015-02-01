@@ -1,7 +1,7 @@
 about_blank
 ===
 
-about_blank  is a Wordpress starter theme, based on Underscores & Bootstrap and comes bundled with the Font Awesome icon font. It is still under construction and considered pre alpha. Use at your own 'risk'.
+about_blank is a Wordpress starter theme, based on Underscores & Bootstrap and comes bundled with the Font Awesome icon font. It is still under construction and considered pre alpha. Use at your own 'risk'.
 
 Have fun!
 

@@ -72,7 +72,7 @@ if ( ! function_exists( 'about_blank_posted_on' ) ) :
 function about_blank_posted_on() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time> updated: <time class="updated" datetime="%3$s">%4$s</time>';
 	}
 
 	$time_string = sprintf( $time_string,
@@ -84,7 +84,7 @@ function about_blank_posted_on() {
 
 	$posted_on = sprintf(
 		_x( '%s', 'post date', 'about_blank' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		$time_string
 	);
 
 	$byline = sprintf(
@@ -264,3 +264,32 @@ function about_blank_category_transient_flusher() {
 }
 add_action( 'edit_category', 'about_blank_category_transient_flusher' );
 add_action( 'save_post',     'about_blank_category_transient_flusher' );
+
+
+if ( ! function_exists( 'about_blank_post_format_type' ) ) :
+/**
+* Prints icons for different Post Format types.
+*/
+function about_blank_post_format_type() {
+	// Hide category and tag text for pages.
+	if ( has_post_format( 'aside' )) {
+			echo '<i class="fa fa-file-o"></i>';
+	}
+
+	if ( has_post_format( 'image' )) {
+			echo '<i class="fa fa-picture-o"></i>';
+	}
+
+	if ( has_post_format( 'video' )) {
+			echo '<i class="fa fa-video-camera"></i>';
+	}
+
+	if ( has_post_format( 'quote' )) {
+			echo '<i class="fa fa-quote-left"></i>';
+	}
+
+	if ( has_post_format( 'link' )) {
+			echo '<i class="fa fa-link"></i>';
+	}
+}
+endif;
