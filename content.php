@@ -7,7 +7,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title">
-		<?php about_blank_post_format_type(); ?>
+		<?php about_blank_post_format_type(); ?><!-- Prints icons for Post Format type -->
 			<?php the_title( sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a>' ); ?>
 		</h1>
 

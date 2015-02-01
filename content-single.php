@@ -6,8 +6,10 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
+		<h1 class="entry-title">
+			<?php about_blank_post_format_type(); ?><!-- Prints icons for Post Format type -->
+			<?php the_title(); ?>
+		</h1>
 		<div class="entry-meta">
 			<?php about_blank_posted_on(); ?>
 		</div><!-- .entry-meta -->
