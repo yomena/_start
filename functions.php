@@ -151,3 +151,8 @@ require get_template_directory() . '/inc/bootstrap-forms.php';
 * Pagination
 */
 require get_template_directory() . '/inc/pagination.php';
+
+/**
+* Bootstrap Commentlist
+*/
+require get_template_directory() . '/inc/commentlist.php';
