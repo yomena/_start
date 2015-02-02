@@ -37,7 +37,7 @@ if ( post_password_required() ) {
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'about_blank' ) ); ?></div>
 		</nav><!-- #comment-nav-above -->
 		<?php endif; // check for comment navigation ?>
-		<?php wp_list_comments('type=comment&callback=about_blank_comment&'); ?>
+		<?php wp_list_comments('type=comment&callback=about_blank_comment'); ?>
 
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
