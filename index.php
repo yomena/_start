@@ -8,7 +8,7 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package about_blank
+ * @package start
  */
 
 get_header(); ?>
@@ -31,7 +31,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php about_blank_pagination($pages = '', $range = 2); ?>
+			<?php start_pagination($pages = '', $range = 2); ?>
 
 		<?php else : ?>
 

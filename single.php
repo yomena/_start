@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package about_blank
+ * @package start
  */
 
 get_header(); ?>
@@ -14,7 +14,7 @@ get_header(); ?>
 
 			<?php get_template_part( 'content', 'single' ); ?>
 
-			<?php about_blank_the_post_navigation(); ?>
+			<?php start_the_post_navigation(); ?>
 
 
 			<?php

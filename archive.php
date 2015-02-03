@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package about_blank
+ * @package start
  */
 
 get_header(); ?>

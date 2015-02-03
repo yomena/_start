@@ -1,7 +1,7 @@
 <?php
 /* More infos: http://codex.wordpress.org/Function_Reference/wp_list_comments */
 
-function about_blank_comment($comment, $args, $depth) {
+function start_comment($comment, $args, $depth) {
   $GLOBALS['comment'] = $comment;
   extract($args, EXTR_SKIP);
 

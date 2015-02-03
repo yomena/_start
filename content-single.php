@@ -1,17 +1,17 @@
 <?php
 /**
- * @package about_blank
+ * @package start
  */
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title">
-			<?php about_blank_post_format_type(); ?><!-- Prints icons for Post Format type -->
+			<?php start_post_format_type(); ?><!-- Prints icons for Post Format type -->
 			<?php the_title(); ?>
 		</h1>
 		<div class="entry-meta">
-			<?php about_blank_posted_on(); ?>
+			<?php start_posted_on(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
@@ -19,13 +19,13 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'about_blank' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'start' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php about_blank_entry_footer(); ?>
+		<?php start_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

@@ -1,10 +1,10 @@
 {
-  "name": "about_blank",
+  "name": "start",
   "version": "0.0.1",
   "authors": [
     "yomena"
   ],
-  "description": "Bower Packages for about_blank",
+  "description": "Bower Packages for start",
   "license": "MIT",
   "homepage": "http://yomena.com",
   "ignore": [

@@ -8333,7 +8333,7 @@ button.close {
 .fa-medium:before {
   content: "\f23a";
 }
-/*Common fixes for the about_blank theme*/
+/*Common fixes for the start theme*/
 /* Text meant only for screen readers. */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);

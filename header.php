@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package about_blank
+ * @package start
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -31,7 +31,7 @@
 			</div>
 		<![endif]-->
 
-		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'about_blank' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'start' ); ?></a>
 		<nav class="navbar navbar-default" role="navigation">
 	<div class="container">
 		<!-- Brand and toggle get grouped for better mobile display -->

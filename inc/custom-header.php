@@ -12,37 +12,37 @@
 	<?php endif; // End header image check. ?>
 
  *
- * @package about_blank
+ * @package start
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses about_blank_header_style()
- * @uses about_blank_admin_header_style()
- * @uses about_blank_admin_header_image()
+ * @uses start_header_style()
+ * @uses start_admin_header_style()
+ * @uses start_admin_header_image()
  */
-function about_blank_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'about_blank_custom_header_args', array(
+function start_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'start_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'about_blank_header_style',
-		'admin-head-callback'    => 'about_blank_admin_header_style',
-		'admin-preview-callback' => 'about_blank_admin_header_image',
+		'wp-head-callback'       => 'start_header_style',
+		'admin-head-callback'    => 'start_admin_header_style',
+		'admin-preview-callback' => 'start_admin_header_image',
 	) ) );
 }
-add_action( 'after_setup_theme', 'about_blank_custom_header_setup' );
+add_action( 'after_setup_theme', 'start_custom_header_setup' );
 
-if ( ! function_exists( 'about_blank_header_style' ) ) :
+if ( ! function_exists( 'start_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see about_blank_custom_header_setup().
+ * @see start_custom_header_setup().
  */
-function about_blank_header_style() {
+function start_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
@@ -75,15 +75,15 @@ function about_blank_header_style() {
 	</style>
 	<?php
 }
-endif; // about_blank_header_style
+endif; // start_header_style
 
-if ( ! function_exists( 'about_blank_admin_header_style' ) ) :
+if ( ! function_exists( 'start_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see about_blank_custom_header_setup().
+ * @see start_custom_header_setup().
  */
-function about_blank_admin_header_style() {
+function start_admin_header_style() {
 ?>
 	<style type="text/css">
 		.appearance_page_custom-header #headimg {
@@ -103,15 +103,15 @@ function about_blank_admin_header_style() {
 	</style>
 <?php
 }
-endif; // about_blank_admin_header_style
+endif; // start_admin_header_style
 
-if ( ! function_exists( 'about_blank_admin_header_image' ) ) :
+if ( ! function_exists( 'start_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see about_blank_custom_header_setup().
+ * @see start_custom_header_setup().
  */
-function about_blank_admin_header_image() {
+function start_admin_header_image() {
 	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 ?>
 	<div id="headimg">
@@ -123,4 +123,4 @@ function about_blank_admin_header_image() {
 	</div>
 <?php
 }
-endif; // about_blank_admin_header_image
+endif; // start_admin_header_image
