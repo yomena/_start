@@ -37,12 +37,21 @@ less: {
   }
   },
 
-//combine and minify css
+//minify css
     cssmin: {
-      minify: {
-        src: 'assets/css/main.css',
-        dest: 'assets/css/main.min.css'
-      }
+
+
+      target: {
+    files: [{
+      expand: true,
+      cwd: 'assets/css',
+      src: ['*.css', '!*.min.css'],
+      dest: 'assets/css',
+      ext: '.min.css'
+    }]
+  }
+
+
     },
 
 
@@ -93,8 +102,10 @@ less: {
         livereload: true,
       },
       scripts: {
-        files: ['assets/css/*.css', '*.p'],
-        tasks: [],
+        files: ['assets/less/*.less', '*.php', 'inc/*.php'],
+        tasks: ['less',
+        'cssmin'
+        ],
         options: {
           spawn: false,
         },
