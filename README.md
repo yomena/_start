@@ -18,7 +18,6 @@ Start modifying....
 
 If you have node.js, grunt and bower installed, run the following commands for more control (e.g. changing bootstrap variables.less) and automatically downloading the latest libraries.
 * npm install
-* bower install
 * grunt
 
 Documentation

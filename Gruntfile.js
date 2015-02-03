@@ -4,6 +4,24 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+
+
+bower: {
+  install: {
+    options: {
+      copy: true,
+      layout: 'byType',
+      install: true,
+      verbose: false,
+      cleanTargetDir: false,
+      cleanBowerDir: false,
+      bowerOptions: {}
+    }
+  }
+},
+
+
+
 //concat javascript
     concat: {
       dist: {
@@ -116,6 +134,7 @@ less: {
 
 //register tasks
     grunt.registerTask('default', [
+      'bower',
       'concat',
       'uglify',
       'less',
