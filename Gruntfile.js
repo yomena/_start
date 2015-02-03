@@ -30,9 +30,8 @@ less: {
       paths: ['assets/css']
     },
     files: {
-      'assets/css/vendor.css': [
-      'bower_components/bootstrap/less/bootstrap.less',
-      'bower_components/fontawesome/less/font-awesome.less'
+      'assets/css/main.css': [
+      'assets/less/main.less'
       ]
     }
   }
@@ -40,14 +39,6 @@ less: {
 
 //combine and minify css
     cssmin: {
-      combine: {
-        files: {
-          'assets/css/main.css': [
-          'assets/css/vendor.css',
-          'assets/css/fixes.css'
-          ]
-        }
-      },
       minify: {
         src: 'assets/css/main.css',
         dest: 'assets/css/main.min.css'
