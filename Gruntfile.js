@@ -5,11 +5,11 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
 
-
+//install bower components
 bower: {
   install: {
     options: {
-      copy: true,
+      copy: false,
       layout: 'byType',
       install: true,
       verbose: false,
