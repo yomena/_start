@@ -1,10 +1,10 @@
 {
-  "name": "start",
+  "name": "_start",
   "version": "0.0.1",
   "authors": [
     "yomena"
   ],
-  "description": "Bower Packages for start",
+  "description": "Bower Packages for _start",
   "license": "MIT",
   "homepage": "http://yomena.com",
   "ignore": [

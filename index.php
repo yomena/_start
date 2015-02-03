@@ -8,7 +8,7 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package start
+ * @package _start
  */
 
 get_header(); ?>
@@ -18,7 +18,7 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<?php /* Start the Loop */ ?>
+			<?php /* _start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
@@ -31,7 +31,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php start_pagination($pages = '', $range = 2); ?>
+			<?php _start_pagination($pages = '', $range = 2); ?>
 
 		<?php else : ?>
 

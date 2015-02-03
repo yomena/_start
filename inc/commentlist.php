@@ -1,7 +1,7 @@
 <?php
 /* More infos: http://codex.wordpress.org/Function_Reference/wp_list_comments */
 
-function start_comment($comment, $args, $depth) {
+function _start_comment($comment, $args, $depth) {
   $GLOBALS['comment'] = $comment;
   extract($args, EXTR_SKIP);
 

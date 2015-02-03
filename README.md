@@ -1,9 +1,9 @@
-start
+_start
 ===
 
-[![devDependency Status](https://david-dm.org/yomena/start/dev-status.svg)](https://david-dm.org/yomena/start#info=devDependencies)
+[![devDependency Status](https://david-dm.org/yomena/_start/dev-status.svg)](https://david-dm.org/yomena/_start#info=devDependencies)
 
-start is a Wordpress starter theme, based on Underscores & Bootstrap and comes bundled with the Font Awesome icon font. It is still under construction and considered pre alpha. Use at your own 'risk'.
+_start is a Wordpress _starter theme, based on Underscores & Bootstrap and comes bundled with the Font Awesome icon font. It is still under construction and considered pre alpha. Use at your own 'risk'.
 
 Have fun!
 
@@ -11,10 +11,10 @@ Installation:
 ---
 Open a terminal and change to your Wordpress theme directory, then run the following command.
 
-* git clone https://github.com/yomena/start.git
+* git clone https://github.com/yomena/_start.git
 
-Log into your Wordpress backend and activate the start theme.
-Start modifying....
+Log into your Wordpress backend and activate the _start theme.
+_start modifying....
 
 If you have node.js, grunt and bower installed, run the following commands for more control (e.g. changing bootstrap variables.less) and automatically downloading the latest libraries.
 * npm install

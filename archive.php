@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package start
+ * @package _start
  */
 
 get_header(); ?>
@@ -21,7 +21,7 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 
-			<?php /* Start the Loop */ ?>
+			<?php /* _start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php

@@ -12,37 +12,37 @@
 	<?php endif; // End header image check. ?>
 
  *
- * @package start
+ * @package _start
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses start_header_style()
- * @uses start_admin_header_style()
- * @uses start_admin_header_image()
+ * @uses _start_header_style()
+ * @uses _start_admin_header_style()
+ * @uses _start_admin_header_image()
  */
-function start_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'start_custom_header_args', array(
+function _start_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( '_start_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'start_header_style',
-		'admin-head-callback'    => 'start_admin_header_style',
-		'admin-preview-callback' => 'start_admin_header_image',
+		'wp-head-callback'       => '_start_header_style',
+		'admin-head-callback'    => '_start_admin_header_style',
+		'admin-preview-callback' => '_start_admin_header_image',
 	) ) );
 }
-add_action( 'after_setup_theme', 'start_custom_header_setup' );
+add_action( 'after_setup_theme', '_start_custom_header_setup' );
 
-if ( ! function_exists( 'start_header_style' ) ) :
+if ( ! function_exists( '_start_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see start_custom_header_setup().
+ * @see _start_custom_header_setup().
  */
-function start_header_style() {
+function _start_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
@@ -75,15 +75,15 @@ function start_header_style() {
 	</style>
 	<?php
 }
-endif; // start_header_style
+endif; // _start_header_style
 
-if ( ! function_exists( 'start_admin_header_style' ) ) :
+if ( ! function_exists( '_start_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see start_custom_header_setup().
+ * @see _start_custom_header_setup().
  */
-function start_admin_header_style() {
+function _start_admin_header_style() {
 ?>
 	<style type="text/css">
 		.appearance_page_custom-header #headimg {
@@ -103,15 +103,15 @@ function start_admin_header_style() {
 	</style>
 <?php
 }
-endif; // start_admin_header_style
+endif; // _start_admin_header_style
 
-if ( ! function_exists( 'start_admin_header_image' ) ) :
+if ( ! function_exists( '_start_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see start_custom_header_setup().
+ * @see _start_custom_header_setup().
  */
-function start_admin_header_image() {
+function _start_admin_header_image() {
 	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 ?>
 	<div id="headimg">
@@ -123,4 +123,4 @@ function start_admin_header_image() {
 	</div>
 <?php
 }
-endif; // start_admin_header_image
+endif; // _start_admin_header_image

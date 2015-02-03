@@ -1,7 +1,7 @@
 <?php
 /* Inspred by http://www.kriesi.at/archives/how-to-build-a-wordpress-post-pagination-without-plugin */
 
-function start_pagination($pages = '', $range = 2)
+function _start_pagination($pages = '', $range = 2)
 {
      $showitems = ($range * 2)+1;
 
