@@ -13,19 +13,19 @@
 class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 
 	/**
-	 * @see Walker::_start_lvl()
+	 * @see Walker::start_lvl()
 	 * @since 3.0.0
 	 *
 	 * @param string $output Passed by reference. Used to append additional content.
 	 * @param int $depth Depth of page. Used for padding.
 	 */
-	public function _start_lvl( &$output, $depth = 0, $args = array() ) {
+	public function start_lvl( &$output, $depth = 0, $args = array() ) {
 		$indent = str_repeat( "\t", $depth );
 		$output .= "\n$indent<ul role=\"menu\" class=\" dropdown-menu\">\n";
 	}
 
 	/**
-	 * @see Walker::_start_el()
+	 * @see Walker::start_el()
 	 * @since 3.0.0
 	 *
 	 * @param string $output Passed by reference. Used to append additional content.
@@ -34,7 +34,7 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 	 * @param int $current_page Menu item ID.
 	 * @param object $args
 	 */
-	public function _start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 
 		/**
@@ -117,7 +117,7 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 			$item_output .= ( $args->has_children && 0 === $depth ) ? ' <span class="caret"></span></a>' : '</a>';
 			$item_output .= $args->after;
 
-			$output .= apply_filters( 'walker_nav_menu__start_el', $item_output, $item, $depth, $args );
+			$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 		}
 	}
 
@@ -130,7 +130,7 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 	 *
 	 * This method shouldn't be called directly, use the walk() method instead.
 	 *
-	 * @see Walker::_start_el()
+	 * @see Walker::start_el()
 	 * @since 2.5.0
 	 *
 	 * @param object $element Data object
