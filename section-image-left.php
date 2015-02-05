@@ -1,23 +1,25 @@
 <?php
-/**
- * The template used for displaying page content in page.php
- *
- * @package _start
- */
+/*
+Template Name: Section - Image Left
+*/
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 	</header><!-- .entry-header -->
-	<div class="entry-content">
+	<div class="entry-content row">
+
+		<div class="col-sm-5">
+				<?php if ( has_post_thumbnail() ) { ?>
+						<?php the_post_thumbnail( 'large-image', array( 'class' => 'img-responsive' ) ); ?>
+				<?php } ?>
+		</div>
+
+		<div class="col-sm-7">
 		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', '_start' ),
-				'after'  => '</div>',
-			) );
-		?>
+		</div>
+
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
